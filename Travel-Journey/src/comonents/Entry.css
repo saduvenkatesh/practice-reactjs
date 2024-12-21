@@ -1,0 +1,17 @@
+.card-container{
+    display: flex;
+}
+
+.main-img-container{
+    margin-right: 10px;
+    max-width: 125px;
+    max-height: 168px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.main-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
