@@ -1,17 +1,26 @@
-.card-container{
-    display: flex;
+article.card-container{
+    display: inline-block;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid black;
 }
 
 .main-img-container{
     margin-right: 10px;
-    max-width: 125px;
-    max-height: 168px;
-    overflow: hidden;
     border-radius: 5px;
+    max-width: 250px;
 }
 
-.main-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+
+.map-icon{
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.card-description{
+    text-align:justify;
 }
