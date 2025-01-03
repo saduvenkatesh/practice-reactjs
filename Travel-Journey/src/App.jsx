@@ -10,7 +10,7 @@ export default function App(){
         
         <Entry
               key={entry.id}
-               entry={entry}
+               {...entry}
       />
       )
   })
