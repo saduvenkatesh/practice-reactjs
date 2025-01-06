@@ -2,14 +2,16 @@ import { useState } from "react"
 import "./App.css"
 export default function App () {
    
-    const [text, setText] = useState("Yes")
+    const [isGoingOut, setIsGoingOut] = useState(true)
     
-    function handleClick(e){
+    function handleClick(){
         
-        if (e.target.value=="Yes") 
-         setText("NO")
+        if (isGoingOut) 
+         setIsGoingOut(false)
         else
-         setText("Yes")
+        setIsGoingOut(true)
+
+
     }
 
 
@@ -17,7 +19,7 @@ export default function App () {
     return(
         <>
                <h1>Do you feel like going outside today ? </h1>
-               <button onClick={handleClick} value={text}>{text}</button>
+               <button onClick={handleClick} >{isGoingOut ? "Yes" : "No"}</button>
         </>
     )
 }
