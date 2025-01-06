@@ -33,4 +33,9 @@ document.getElementById("root").appendChild(h1)
 //                                   2) Focus on the process 
 
 // React is compasable and declarative programming paradigm
-      
+
+
+/* HOOKS:
+  1) useState : 
+     Note : If you ever need the old value of state to help you determine the new value of state, you should pass a callback function to your state directly. This callback function will receive the old value of state as its parameter, which you can then use to determine your new value. Otherwise you can use the setValue function directly.
+*/
