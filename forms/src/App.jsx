@@ -2,33 +2,52 @@ import "./App.css"
 
 export default function App (){
 
-  function signUp(formData){
+ function signUp(event){q
+
+  event.preventDefault()
     
-  
+  const formData = new FormData(event.currentTarget)
+
     const email = formData.get("email")
-    
+
+    const password = formData.get("password")
+
     console.log(email)
-  
-    // Gather the form info 
-    // And submit it to the backend
+    console.log(password)
 
-    
-  }
-
+ }
   return (
       
       <>    
             <h1>Signup Form</h1>
-            <form onSubmit={signUp}>
+            <form onSubmit={signUp} >
+
               <label htmlFor="email">Email : 
-                <input type="email" name="email" id="email" placeholder="venky@gmail.com" />
+                <input type="email" name="email" id="email" placeholder="venky@gmail.com" required />
               </label>
+
               <br /><br />
+
               <label htmlFor="password">Password : 
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" required />
               </label><br /><br />
-              
-              <button >submit</button>
+
+              <fieldset>
+                <legend>Employment Status</legend>
+              <label>
+                  <input type="radio" name="employmentStatus" required/>
+                  Unemployment
+              </label>
+              <label>
+                <input type="radio" name="employmentStatus" required/>
+                partTime
+              </label>
+              <label>
+                <input type="radio" name="employmentStatus" required/>
+                fullTime
+              </label>
+              </fieldset>
+              <button type="submit" >submit</button>
             </form>
       </>
   )
