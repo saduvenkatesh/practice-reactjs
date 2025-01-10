@@ -1,12 +1,9 @@
 import "./App.css"
+import React from "react"
 
 export default function App (){
 
- function signUp(event){q
-
-  event.preventDefault()
-    
-  const formData = new FormData(event.currentTarget)
+ function signUp(formData){
 
     const email = formData.get("email")
 
@@ -20,7 +17,7 @@ export default function App (){
       
       <>    
             <h1>Signup Form</h1>
-            <form onSubmit={signUp} >
+            <form action={signUp} >
 
               <label htmlFor="email">Email : 
                 <input type="email" name="email" id="email" placeholder="venky@gmail.com" required />
@@ -30,24 +27,32 @@ export default function App (){
 
               <label htmlFor="password">Password : 
                 <input type="password" name="password" id="password" required />
-              </label><br /><br />
+              </label>
+              
+              <br /><br />
 
               <fieldset>
                 <legend>Employment Status</legend>
+
               <label>
                   <input type="radio" name="employmentStatus" required/>
                   Unemployment
               </label>
+
               <label>
                 <input type="radio" name="employmentStatus" required/>
                 partTime
               </label>
+
               <label>
                 <input type="radio" name="employmentStatus" required/>
                 fullTime
               </label>
+
               </fieldset>
-              <button type="submit" >submit</button>
+
+              <button >submit</button>
+
             </form>
       </>
   )
