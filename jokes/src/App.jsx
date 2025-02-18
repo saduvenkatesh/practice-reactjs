@@ -5,7 +5,7 @@ import Data from "./data.js"
 
 export default function App(){
 
-  const [message, setMessage] = React.useState([])
+  const [message, setMessage] = React.useState(["hi", "baby"])
 
   const JokeElement = Data.map(joke=>{
     return(
@@ -18,8 +18,8 @@ export default function App(){
   return(
     <div>
       {JokeElement}
-      {message.length > 0 && <p>Hey you have {message.length} unread messages</p>}
-      {message.length == 0 && <p>Hey your message box is empty</p>}
+      {message.length <1 ? <p>Hey your message box is empty</p>:<p>you have {message.length} unread {message.length>1 ? "messages" : "message"}</p>}  {/* Nested ternary conditioning */}
+      
     </div>
   )
 }
